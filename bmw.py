@@ -32,10 +32,7 @@ def autotrader():
         r = requests.get(url, headers=headers, proxies=proxies)
     if r.status_code != 200:
         return []
-    try:
-        cars = json.loads(r.text)['alphaShowcase']
-    except json.decoder.JSONDecodeError:
-        r = requests.get(url, headers=headers, proxies=proxies)
+    cars = json.loads(r.text)['alphaShowcase']
     msgs = []
     for car in cars[:5]:
         if car['id'] in checked:
