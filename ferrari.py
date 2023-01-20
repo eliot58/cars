@@ -24,7 +24,7 @@ def autotrader():
     with open('autotrader.json', 'r') as f:
         checked = json.load(f)
     try:
-        r = requests.get(url, headers=headers)
+        r = requests.get(url, headers=headers, proxies=proxies)
     except requests.exceptions.ConnectionError:
         return []
 
@@ -137,7 +137,7 @@ def carscom():
     with open('carscom.json', 'r') as f:
         checked = json.load(f)
     try:
-        r = requests.get(url, headers=headers)
+        r = requests.get(url, headers=headers, proxies=proxies)
     except requests.exceptions.ConnectionError:
         return []
     if r.status_code == 403:
