@@ -177,8 +177,8 @@ async def send_msg(channel, text):
 async def on_ready():
     channel = 1065664766116364419
     while True:
-        msgs = autotrader()
-        msgs+= carguru()
+        # msgs = autotrader()
+        msgs = carguru()
         msgs+= craiglist()
         msgs+= carscom()
         for msg in msgs:
