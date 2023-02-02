@@ -103,7 +103,6 @@ async def craiglist(u):
     async with aiohttp.ClientSession() as session:
         
         response = await session.get(url=url, headers=headers)
-        print(response.text)
         bs = BeautifulSoup(await response.text(), 'lxml')
         cars = bs.find_all(class_='result-row')
         msgs = []
