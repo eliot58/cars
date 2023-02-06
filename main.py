@@ -6,7 +6,6 @@ import discord, asyncio
 from discord.ext import commands
 from dotenv import load_dotenv
 import os
-import schedule
 import time
 
 load_dotenv()
@@ -35,10 +34,10 @@ def craiglist():
     urls = ['/search/cta?auto_make_model=porshe&max_auto_year=2015&auto_transmission=1', '/search/cta?auto_make_model=bmw&max_auto_year=1997&max_auto_miles=150000&auto_transmission=1', '/search/cta?auto_make_model=lamborghini', '/search/cta?auto_make_model=ferrari']
     
     msgs = {
-        'porshe': [],
-        'bmw': [],
-        'lamba': [],
-        'ferrari': [],
+        'porshe': '',
+        'bmw': '',
+        'lamba': '',
+        'ferrari': '',
     }
 
     with open('craigs.json', 'r') as f:
@@ -47,8 +46,9 @@ def craiglist():
 
     for u in links:
         for url in urls:
-            
             response = s.get(u + url, headers=headers)
+            if response.status_code == 403:
+                response = s.get(u + url, headers=headers, proxies=proxies)
             bs = BeautifulSoup(response.text, 'lxml')
             cars = bs.find_all(class_='result-row')
             if len(cars) == 0:
@@ -71,20 +71,15 @@ def craiglist():
                 msg = msg + '-----> Price: ' + car.find(class_='result-price').text + '\n'
                 msg = msg + '-----> Link: $' + link
                 if '/search/cta?auto_make_model=porshe&max_auto_year=2015&auto_transmission=1' == link:
-                    msgs['porshe'].append(msg)
+                    msgs['porshe'] += '\n' + '\n' + msg
                 elif '/search/cta?auto_make_model=bmw&max_auto_year=1997&max_auto_miles=150000&auto_transmission=1' == link:
-                    msgs['bmw'].append(msg)
+                    msgs['bmw'] += '\n' + '\n' + msg
                 elif '/search/cta?auto_make_model=lamborghini' == link:
-                    msgs['lamba'].append(msg)
+                    msgs['lamba'] += '\n' + '\n' + msg
                 elif '/search/cta?auto_make_model=ferrari' == link:
-                    msgs['ferrari'].append(msg)
+                    msgs['ferrari'] += '\n' + '\n' + msg
                 checked.append(link.split('/')[-1].split('.')[0])
-                time.sleep(10)
-            
-
-
-            time.sleep(10)
-        time.sleep(10)
+            time.sleep(20)
 
     with open('craigs.json', 'w') as f:
         json.dump(checked, f)
@@ -101,22 +96,23 @@ def carguru():
     'https://www.cargurus.com/Cars/preflightResults.action?zip=33009&inventorySearchWidgetType=AUTO&srpVariation=DEFAULT_SEARCH&searchId=dac04f92-0e05-42ba-9ac6-38da7c1f945a&nonShippableBaseline=202&shopByTypes=NEAR_BY&sortDir=ASC&sourceContext=carGurusHomePageModel&distance=50&sortType=AGE_IN_DAYS&entitySelectingHelper.selectedEntity=m25']
 
     msgs = {
-        'porshe': [],
-        'bmw': [],
-        'lamba': [],
-        'ferrari': [],
+        'porshe': '',
+        'bmw': '',
+        'lamba': '',
+        'ferrari': '',
     }
+
+    with open('carsguru.json', 'r') as f:
+        checked = json.load(f)
 
 
     for url in urls:
-        with open('carsguru.json', 'r') as f:
-            checked = json.load(f)
         try:
             r = s.get(url, headers=headers)
         except requests.exceptions.ConnectionError:
             continue
         if r.status_code == 403:
-            r = s.get(url, headers=headers)
+            r = s.get(url, headers=headers, proxies=proxies)
         if r.status_code != 200:
             continue
         cars = json.loads(r.text)['listings']
@@ -133,18 +129,18 @@ def carguru():
                 continue
             msg = msg + '-----> Link: $' + f'https://www.cargurus.com/Cars/inventorylisting/viewDetailsFilterViewInventoryListing.action?entitySelectingHelper.selectedEntity=m48&distance=50&zip=33009&sourceContext=RecentSearches_false_0&startYear=2015&isRecentSearchView=true?io=true&format=jpg&auto=webp#listing={car["id"]}/NONE'
             if 'https://www.cargurus.com/Cars/preflightResults.action?zip=33009&inventorySearchWidgetType=AUTO&srpVariation=DEFAULT_SEARCH&searchId=afd8088a-7173-4172-b4ad-cdd38b0551f0&transmission=M&nonShippableBaseline=906&shopByTypes=MIX&sortDir=ASC&sourceContext=carGurusHomePageModel&distance=50&sortType=AGE_IN_DAYS&endYear=2015&entitySelectingHelper.selectedEntity=m48' == url:
-                msgs['porshe'].append(msg)
+                msgs['porshe'] += '\n' + '\n' + msg
             elif 'https://www.cargurus.com/Cars/preflightResults.action?zip=33009&inventorySearchWidgetType=AUTO&srpVariation=DEFAULT_SEARCH&searchId=7fac9cb9-bba5-4947-ac2b-b783693b3231&transmission=M&nonShippableBaseline=56&maxMileage=150000&shopByTypes=MIX&sortDir=ASC&sourceContext=carGurusHomePageModel&distance=50&sortType=AGE_IN_DAYS&endYear=1997&entitySelectingHelper.selectedEntity=m3' == url:
-                msgs['bmw'].append(msg)
+                msgs['bmw'] += '\n' + '\n' + msg
             elif 'https://www.cargurus.com/Cars/preflightResults.action?zip=33009&inventorySearchWidgetType=AUTO&srpVariation=DEFAULT_SEARCH&sellerHierarchyTypes=PRIVATE&searchId=01065332-774b-41d5-bc38-c1c9865b2943&nonShippableBaseline=188&shopByTypes=NEAR_BY&sortDir=ASC&sourceContext=carGurusHomePageModel&distance=50&sortType=AGE_IN_DAYS&entitySelectingHelper.selectedEntity=m34' == url:
-                msgs['lamba'].append(msg)
+                msgs['lamba'] += '\n' + '\n' + msg
             elif 'https://www.cargurus.com/Cars/preflightResults.action?zip=33009&inventorySearchWidgetType=AUTO&srpVariation=DEFAULT_SEARCH&searchId=dac04f92-0e05-42ba-9ac6-38da7c1f945a&nonShippableBaseline=202&shopByTypes=NEAR_BY&sortDir=ASC&sourceContext=carGurusHomePageModel&distance=50&sortType=AGE_IN_DAYS&entitySelectingHelper.selectedEntity=m25' == url:
-                msgs['ferrari'].append(msg)
+                msgs['ferrari'] += '\n' + '\n' + msg
 
             checked.append(car['id'])
         
-        with open('carsguru.json', 'w') as f:
-            json.dump(checked, f)
+    with open('carsguru.json', 'w') as f:
+        json.dump(checked, f)
 
 
     return msgs
@@ -158,14 +154,14 @@ def carscom():
     'https://www.cars.com/shopping/results/?makes[]=ferrari&sort=listed_at_desc&zip=33009']
 
     msgs = {
-        'porshe': [],
-        'bmw': [],
-        'lamba': [],
-        'ferrari': [],
+        'porshe': '',
+        'bmw': '',
+        'lamba': '',
+        'ferrari': '',
     }
 
     with open('carscom.json', 'r') as f:
-            checked = json.load(f)
+        checked = json.load(f)
 
     for url in urls:
         try:
@@ -173,7 +169,7 @@ def carscom():
         except requests.exceptions.ConnectionError:
             continue
         if r.status_code == 403:
-            r = requests.get(url)
+            r = s.get(url, headers=headers, proxies=proxies)
         if r.status_code != 200:
             continue
         bs = BeautifulSoup(r.text, 'lxml')
@@ -191,13 +187,13 @@ def carscom():
             msg = msg + '-----> Price: ' + car.find('span', class_='primary-price').text + '\n'
             msg = msg + '-----> Link: $' + f'https://www.cars.com{link}'
             if 'https://www.cars.com/shopping/results/?dealer_id=&keyword=&list_price_max=&list_price_min=&makes[]=porsche&maximum_distance=20&mileage_max=&page_size=20&sort=listed_at_desc&stock_type=all&transmission_slugs[]=manual&year_max=2016&year_min=&zip=33009' == url:
-                msgs['porshe'].append(msg)
+                msgs['porshe'] += '\n' + '\n' + msg
             elif 'https://www.cars.com/shopping/results/?dealer_id=&keyword=&list_price_max=&list_price_min=&makes[]=bmw&maximum_distance=30&mileage_max=150000&page_size=20&sort=listed_at_desc&stock_type=all&transmission_slugs[]=manual&year_max=1997&year_min=&zip=33009' == url:
-                msgs['bmw'].append(msg)
+                msgs['bmw'] += '\n' + '\n' + msg
             elif 'https://www.cars.com/shopping/results/?dealer_id=&keyword=&list_price_max=&list_price_min=&makes[]=lamborghini&maximum_distance=30&mileage_max=&page_size=20&seller_type[]=private_seller&sort=listed_at_desc&stock_type=all&year_max=&year_min=&zip=33009' == url:
-                msgs['lamba'].append(msg)
+                msgs['lamba'] += '\n' + '\n' + msg
             elif 'https://www.cars.com/shopping/results/?makes[]=ferrari&sort=listed_at_desc&zip=33009' == url:
-                msgs['ferrari'].append(msg)
+                msgs['ferrari'] += '\n' + '\n' + msg
             checked.append(link.split('/')[2])
         
     with open('carscom.json', 'w') as f:
@@ -218,55 +214,57 @@ async def send_msg(channel, text):
 async def on_ready():
     while True:
         guru = carguru()
+        asyncio.run_coroutine_threadsafe(send_msg(porshe, guru['porshe']), bot.loop)
+
+        await asyncio.sleep(5)
+
+        asyncio.run_coroutine_threadsafe(send_msg(bmw, guru['bmw']), bot.loop)
+
+        await asyncio.sleep(5)
+
+        asyncio.run_coroutine_threadsafe(send_msg(lamba, guru['lamba']), bot.loop)
+
+        await asyncio.sleep(5)
+
+        asyncio.run_coroutine_threadsafe(send_msg(ferrari, guru['ferrari']), bot.loop)
+
+        await asyncio.sleep(5)
+
+
         com = carscom()
+
+        asyncio.run_coroutine_threadsafe(send_msg(porshe, com['porshe']), bot.loop)
+
+        await asyncio.sleep(5)
+
+        asyncio.run_coroutine_threadsafe(send_msg(bmw, com['bmw']), bot.loop)
+
+        await asyncio.sleep(5)
+
+        asyncio.run_coroutine_threadsafe(send_msg(lamba, com['lamba']), bot.loop)
+
+        await asyncio.sleep(5)
+
+        asyncio.run_coroutine_threadsafe(send_msg(ferrari, com['ferrari']), bot.loop)
+
+        await asyncio.sleep(5)
+
         craig = craiglist()
-        for msg in craig['porshe']:
-            asyncio.run_coroutine_threadsafe(send_msg(porshe, msg), bot.loop)
-            await asyncio.sleep(10)
-        for msg in craig['bmw']:
-            asyncio.run_coroutine_threadsafe(send_msg(bmw, msg), bot.loop)
-            await asyncio.sleep(10)
-        for msg in craig['lamba']:
-            asyncio.run_coroutine_threadsafe(send_msg(lamba, msg), bot.loop)
-            await asyncio.sleep(10)
-        for msg in craig['ferrari']:
-            asyncio.run_coroutine_threadsafe(send_msg(ferrari, msg), bot.loop)
-            await asyncio.sleep(10)
+
+        asyncio.run_coroutine_threadsafe(send_msg(porshe, craig['porshe']), bot.loop)
+
+        await asyncio.sleep(5)
+
+        asyncio.run_coroutine_threadsafe(send_msg(bmw, craig['bmw']), bot.loop)
+
+        await asyncio.sleep(5)
+
+        asyncio.run_coroutine_threadsafe(send_msg(lamba, craig['lamba']), bot.loop)
+
+        await asyncio.sleep(5)
+
+        asyncio.run_coroutine_threadsafe(send_msg(ferrari, craig['ferrari']), bot.loop)
             
-        for msg in guru['porshe']:
-            asyncio.run_coroutine_threadsafe(send_msg(porshe, msg), bot.loop)
-            await asyncio.sleep(10)
-
-        for msg in guru['bmw']:
-            asyncio.run_coroutine_threadsafe(send_msg(bmw, msg), bot.loop)
-            await asyncio.sleep(10)
-
-
-        for msg in guru['lamba']:
-            asyncio.run_coroutine_threadsafe(send_msg(lamba, msg), bot.loop)
-            await asyncio.sleep(10)
-
-        for msg in guru['ferrari']:
-            asyncio.run_coroutine_threadsafe(send_msg(ferrari, msg), bot.loop)
-            await asyncio.sleep(10)
-
-
-        for msg in com['porshe']:
-            asyncio.run_coroutine_threadsafe(send_msg(porshe, msg), bot.loop)
-            await asyncio.sleep(10)
-
-        for msg in com['bmw']:
-            asyncio.run_coroutine_threadsafe(send_msg(bmw, msg), bot.loop)
-            await asyncio.sleep(10)
-
-
-        for msg in com['lamba']:
-            asyncio.run_coroutine_threadsafe(send_msg(lamba, msg), bot.loop)
-            await asyncio.sleep(10)
-
-        for msg in com['ferrari']:
-            asyncio.run_coroutine_threadsafe(send_msg(ferrari, msg), bot.loop)
-            await asyncio.sleep(10)
 
         await asyncio.sleep(30 * 60)
     
