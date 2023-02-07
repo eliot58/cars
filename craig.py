@@ -71,12 +71,8 @@ def craiglist():
                 elif '/search/cta?auto_make_model=ferrari' == link:
                     msgs['ferrari'].append(msg)
                 checked.append(link.split('/')[-1].split('.')[0])
-                time.sleep(30)
+            # time.sleep(20)
             
-
-
-            time.sleep(30)
-        time.sleep(30)
 
     with open('craigs.json', 'w') as f:
         json.dump(checked, f)
