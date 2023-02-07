@@ -137,28 +137,31 @@ async def craiglist(u):
     return msgs
 
 
-bot = commands.Bot(intents=discord.Intents.default(),command_prefix='!')
+# bot = commands.Bot(intents=discord.Intents.default(),command_prefix='!')
 
-async def send_msg(channel, text):
-    channel = bot.get_channel(channel)
-    await channel.send(text)
+# async def send_msg(channel, text):
+#     channel = bot.get_channel(channel)
+#     await channel.send(text)
 
-@bot.event
-async def on_ready():
-    channel = 1065664766116364419
-    while True:
-        msgs = carguru()
-        msgs+= carscom()
-        tasks = []
-        for link in links:
-            task = asyncio.create_task(craiglist(link))
-            tasks.append(task)
-        results = await asyncio.gather(*tasks)
-        for result in results:
-            msgs+=result
-        for msg in msgs:
-            asyncio.run_coroutine_threadsafe(send_msg(channel, msg), bot.loop)
-            await asyncio.sleep(10)
-        await asyncio.sleep(20*60)
+# @bot.event
+# async def on_ready():
+#     channel = 1065664766116364419
+#     while True:
+#         msgs = carguru()
+#         msgs+= carscom()
+#         tasks = []
+#         for link in links:
+#             task = asyncio.create_task(craiglist(link))
+#             tasks.append(task)
+#         results = await asyncio.gather(*tasks)
+#         for result in results:
+#             msgs+=result
+#         for msg in msgs:
+#             asyncio.run_coroutine_threadsafe(send_msg(channel, msg), bot.loop)
+#             await asyncio.sleep(10)
+#         await asyncio.sleep(20*60)
 
-bot.run(os.getenv('BMW'))
+# bot.run(os.getenv('BMW'))
+
+
+print(len(list(set(links))))
