@@ -6,7 +6,6 @@ import discord, asyncio
 from discord.ext import commands
 from dotenv import load_dotenv
 import os
-import time
 
 load_dotenv()
 
