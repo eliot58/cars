@@ -253,7 +253,7 @@ async def on_ready():
     asyncio.run_coroutine_threadsafe(send_msg(ferrari, craig['ferrari']), bot.loop)
 
 
-    await asyncio.sleep(60*60)
+    sys.exit()
 
 
 
