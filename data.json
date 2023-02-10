@@ -1,0 +1,1415 @@
+{
+    "apiVersion": 7,
+    "configId": "29d0949a04ee49b63591a5e66882b9425eaee60097fff155574fa08b9d6f61c9",
+    "configTs": 1675971604,
+    "data": {
+        "areas": {
+            "20": {
+                "areaUnits": "ft",
+                "currency": "USD",
+                "distanceUnits": "mi",
+                "name": "miami"
+            }
+        },
+        "cacheTs": 1675973706,
+        "canonicalUrl": "\/\/miami.craigslist.org\/search\/cta?auto_make_model=bmw&auto_transmission=1&max_auto_miles=150000&max_auto_year=1997",
+        "categoryAbbr": "cta",
+        "decode": {
+            "locationDescriptions": [
+                0,
+                "Miami",
+                "broward county",
+                "Pompano Beach",
+                "Hollywood",
+                "Oakland Park",
+                "Fort Lauderdale",
+                "Port Saint Lucie fl",
+                "Naples",
+                "Palmetto",
+                "lee county",
+                "ENGLEWOOD",
+                "Cape Coral"
+            ],
+            "locations": [
+                0,
+                [
+                    20,
+                    "miami",
+                    "mdc"
+                ],
+                [
+                    20,
+                    "miami",
+                    "brw"
+                ],
+                [
+                    332,
+                    "treasure"
+                ],
+                [
+                    125,
+                    "fortmyers",
+                    "col"
+                ],
+                [
+                    237,
+                    "sarasota"
+                ],
+                [
+                    125,
+                    "fortmyers",
+                    "lee"
+                ]
+            ],
+            "maxPostedDate": 1675958418,
+            "minDate": 1707509706,
+            "minPostedDate": 1673809219,
+            "minPostingId": 7578811293,
+            "neighborhoods": [
+                0
+            ],
+            "version": 1
+        },
+        "detailsOrder": "date",
+        "filterButtons": [
+            {
+                "buttonLabel": "price",
+                "formConfig": {
+                    "input_prefix": "$",
+                    "label": "price",
+                    "maxVal": {
+                        "name": "max_price",
+                        "placeholder": "max"
+                    },
+                    "minVal": {
+                        "name": "min_price",
+                        "placeholder": "min"
+                    },
+                    "name": "price",
+                    "type": "range"
+                },
+                "isSet": ""
+            },
+            {
+                "buttonLabel": "sold by",
+                "formConfig": {
+                    "label": "sold by",
+                    "name": "purveyor",
+                    "options": [
+                        {
+                            "label": "all",
+                            "value": "all"
+                        },
+                        {
+                            "label": "owner",
+                            "value": "owner"
+                        },
+                        {
+                            "label": "dealer",
+                            "value": "dealer"
+                        }
+                    ],
+                    "type": "select",
+                    "variant": "radio"
+                },
+                "isSet": ""
+            },
+            {
+                "buttonLabel": "type",
+                "formConfig": {
+                    "label": "type",
+                    "name": "auto_bodytype",
+                    "options": [
+                        {
+                            "label": "bus",
+                            "value": 1
+                        },
+                        {
+                            "label": "convertible",
+                            "value": 2
+                        },
+                        {
+                            "label": "coupe",
+                            "value": 3
+                        },
+                        {
+                            "label": "hatchback",
+                            "value": 4
+                        },
+                        {
+                            "label": "mini-van",
+                            "value": 5
+                        },
+                        {
+                            "label": "offroad",
+                            "value": 6
+                        },
+                        {
+                            "label": "pickup",
+                            "value": 7
+                        },
+                        {
+                            "label": "sedan",
+                            "value": 8
+                        },
+                        {
+                            "label": "truck",
+                            "value": 9
+                        },
+                        {
+                            "label": "SUV",
+                            "value": 10
+                        },
+                        {
+                            "label": "wagon",
+                            "value": 11
+                        },
+                        {
+                            "label": "van",
+                            "value": 12
+                        },
+                        {
+                            "label": "other",
+                            "value": 13
+                        }
+                    ],
+                    "type": "multi"
+                },
+                "isSet": ""
+            },
+            {
+                "buttonLabel": "max 1997 model year",
+                "formConfig": {
+                    "label": "model year",
+                    "maxVal": {
+                        "name": "max_auto_year",
+                        "placeholder": "max"
+                    },
+                    "minVal": {
+                        "name": "min_auto_year",
+                        "placeholder": "min"
+                    },
+                    "name": "auto_year",
+                    "type": "range"
+                },
+                "isSet": 1
+            },
+            {
+                "buttonLabel": "condition",
+                "formConfig": {
+                    "label": "condition",
+                    "name": "condition",
+                    "options": [
+                        {
+                            "label": "new",
+                            "value": "10"
+                        },
+                        {
+                            "label": "like new",
+                            "value": "20"
+                        },
+                        {
+                            "label": "excellent",
+                            "value": "30"
+                        },
+                        {
+                            "label": "good",
+                            "value": "40"
+                        },
+                        {
+                            "label": "fair",
+                            "value": "50"
+                        },
+                        {
+                            "label": "salvage",
+                            "value": "60"
+                        }
+                    ],
+                    "type": "multi"
+                },
+                "isSet": ""
+            },
+            {
+                "buttonLabel": "fuel",
+                "formConfig": {
+                    "label": "fuel",
+                    "name": "auto_fuel_type",
+                    "options": [
+                        {
+                            "label": "gas",
+                            "value": 1
+                        },
+                        {
+                            "label": "diesel",
+                            "value": 2
+                        },
+                        {
+                            "label": "hybrid",
+                            "value": 3
+                        },
+                        {
+                            "label": "electric",
+                            "value": 4
+                        },
+                        {
+                            "label": "other",
+                            "value": 6
+                        }
+                    ],
+                    "type": "multi"
+                },
+                "isSet": ""
+            },
+            {
+                "buttonLabel": "bmw",
+                "formConfig": {
+                    "autocomplete": "makemodel",
+                    "label": "make and model",
+                    "name": "auto_make_model",
+                    "type": "text"
+                },
+                "isSet": 1
+            },
+            {
+                "buttonLabel": "manual",
+                "formConfig": {
+                    "label": "transmission",
+                    "name": "auto_transmission",
+                    "options": [
+                        {
+                            "label": "manual",
+                            "value": 1
+                        },
+                        {
+                            "label": "automatic",
+                            "value": 2
+                        },
+                        {
+                            "label": "other",
+                            "value": 3
+                        }
+                    ],
+                    "type": "multi"
+                },
+                "isSet": 1
+            },
+            {
+                "buttonLabel": "max 150000 odometer",
+                "formConfig": {
+                    "label": "odometer",
+                    "maxVal": {
+                        "name": "max_auto_miles",
+                        "placeholder": "max"
+                    },
+                    "minVal": {
+                        "name": "min_auto_miles",
+                        "placeholder": "min"
+                    },
+                    "name": "auto_miles",
+                    "type": "range"
+                },
+                "isSet": 1
+            }
+        ],
+        "filters": [
+            {
+                "autocomplete": "search",
+                "label": "query",
+                "name": "query",
+                "type": "text"
+            },
+            {
+                "name": "vicinity",
+                "type": "hidden"
+            },
+            {
+                "label": "sort by",
+                "name": "sort",
+                "options": [
+                    {
+                        "label": "newest",
+                        "value": "date"
+                    },
+                    {
+                        "label": "oldest",
+                        "value": "dateoldest"
+                    },
+                    {
+                        "label": "﹩→ $$$",
+                        "value": "priceasc"
+                    },
+                    {
+                        "label": "$$$ → ﹩",
+                        "value": "pricedsc"
+                    }
+                ],
+                "type": "select",
+                "value": "date"
+            },
+            {
+                "input_prefix": "$",
+                "label": "price",
+                "maxVal": {
+                    "name": "max_price",
+                    "placeholder": "max"
+                },
+                "minVal": {
+                    "name": "min_price",
+                    "placeholder": "min"
+                },
+                "name": "price",
+                "type": "range",
+                "variant": "barchartwidget"
+            },
+            {
+                "label": "sold by",
+                "name": "purveyor",
+                "options": [
+                    {
+                        "label": "all",
+                        "value": "all"
+                    },
+                    {
+                        "label": "owner",
+                        "value": "owner"
+                    },
+                    {
+                        "label": "dealer",
+                        "value": "dealer"
+                    }
+                ],
+                "type": "select"
+            },
+            {
+                "autocomplete": "makemodel",
+                "label": "make and model",
+                "name": "auto_make_model",
+                "type": "text",
+                "variant": "text"
+            },
+            {
+                "label": "odometer",
+                "maxVal": {
+                    "name": "max_auto_miles",
+                    "placeholder": "max"
+                },
+                "minVal": {
+                    "name": "min_auto_miles",
+                    "placeholder": "min"
+                },
+                "name": "auto_miles",
+                "type": "range"
+            },
+            {
+                "label": "model year",
+                "maxVal": {
+                    "name": "max_auto_year",
+                    "placeholder": "max"
+                },
+                "minVal": {
+                    "name": "min_auto_year",
+                    "placeholder": "min"
+                },
+                "name": "auto_year",
+                "type": "range"
+            },
+            {
+                "label": "drive",
+                "name": "auto_drivetrain",
+                "options": [
+                    {
+                        "label": "fwd",
+                        "value": 1
+                    },
+                    {
+                        "label": "rwd",
+                        "value": 2
+                    },
+                    {
+                        "label": "4wd",
+                        "value": 3
+                    }
+                ],
+                "type": "multi",
+                "variant": "standard"
+            },
+            {
+                "label": "transmission",
+                "name": "auto_transmission",
+                "options": [
+                    {
+                        "label": "manual",
+                        "value": 1
+                    },
+                    {
+                        "label": "automatic",
+                        "value": 2
+                    },
+                    {
+                        "label": "other",
+                        "value": 3
+                    }
+                ],
+                "type": "multi",
+                "variant": "standard"
+            },
+            {
+                "label": "paint color",
+                "name": "auto_paint",
+                "options": [
+                    {
+                        "label": "black",
+                        "value": 1
+                    },
+                    {
+                        "label": "blue",
+                        "value": 2
+                    },
+                    {
+                        "label": "brown",
+                        "value": 20
+                    },
+                    {
+                        "label": "green",
+                        "value": 3
+                    },
+                    {
+                        "label": "grey",
+                        "value": 4
+                    },
+                    {
+                        "label": "orange",
+                        "value": 5
+                    },
+                    {
+                        "label": "purple",
+                        "value": 6
+                    },
+                    {
+                        "label": "red",
+                        "value": 7
+                    },
+                    {
+                        "label": "silver",
+                        "value": 8
+                    },
+                    {
+                        "label": "white",
+                        "value": 9
+                    },
+                    {
+                        "label": "yellow",
+                        "value": 10
+                    },
+                    {
+                        "label": "custom",
+                        "value": 11
+                    }
+                ],
+                "type": "multi",
+                "variant": "standard"
+            },
+            {
+                "label": "size",
+                "name": "auto_size",
+                "options": [
+                    {
+                        "label": "compact",
+                        "value": 1
+                    },
+                    {
+                        "label": "full-size",
+                        "value": 2
+                    },
+                    {
+                        "label": "mid-size",
+                        "value": 3
+                    },
+                    {
+                        "label": "sub-compact",
+                        "value": 4
+                    }
+                ],
+                "type": "multi",
+                "variant": "standard"
+            },
+            {
+                "label": "type",
+                "name": "auto_bodytype",
+                "options": [
+                    {
+                        "label": "bus",
+                        "value": 1
+                    },
+                    {
+                        "label": "convertible",
+                        "value": 2
+                    },
+                    {
+                        "label": "coupe",
+                        "value": 3
+                    },
+                    {
+                        "label": "hatchback",
+                        "value": 4
+                    },
+                    {
+                        "label": "mini-van",
+                        "value": 5
+                    },
+                    {
+                        "label": "offroad",
+                        "value": 6
+                    },
+                    {
+                        "label": "pickup",
+                        "value": 7
+                    },
+                    {
+                        "label": "sedan",
+                        "value": 8
+                    },
+                    {
+                        "label": "truck",
+                        "value": 9
+                    },
+                    {
+                        "label": "SUV",
+                        "value": 10
+                    },
+                    {
+                        "label": "wagon",
+                        "value": 11
+                    },
+                    {
+                        "label": "van",
+                        "value": 12
+                    },
+                    {
+                        "label": "other",
+                        "value": 13
+                    }
+                ],
+                "type": "multi",
+                "variant": "standard"
+            },
+            {
+                "label": "fuel",
+                "name": "auto_fuel_type",
+                "options": [
+                    {
+                        "label": "gas",
+                        "value": 1
+                    },
+                    {
+                        "label": "diesel",
+                        "value": 2
+                    },
+                    {
+                        "label": "hybrid",
+                        "value": 3
+                    },
+                    {
+                        "label": "electric",
+                        "value": 4
+                    },
+                    {
+                        "label": "other",
+                        "value": 6
+                    }
+                ],
+                "type": "multi",
+                "variant": "standard"
+            },
+            {
+                "label": "title status",
+                "name": "auto_title_status",
+                "options": [
+                    {
+                        "label": "clean",
+                        "value": 1
+                    },
+                    {
+                        "label": "salvage",
+                        "value": 2
+                    },
+                    {
+                        "label": "rebuilt",
+                        "value": 3
+                    },
+                    {
+                        "label": "parts only",
+                        "value": 4
+                    },
+                    {
+                        "label": "lien",
+                        "value": 5
+                    },
+                    {
+                        "label": "missing",
+                        "value": 6
+                    }
+                ],
+                "type": "multi",
+                "variant": "standard"
+            },
+            {
+                "label": "condition",
+                "name": "condition",
+                "options": [
+                    {
+                        "label": "new",
+                        "value": 10
+                    },
+                    {
+                        "label": "like new",
+                        "value": 20
+                    },
+                    {
+                        "label": "excellent",
+                        "value": 30
+                    },
+                    {
+                        "label": "good",
+                        "value": 40
+                    },
+                    {
+                        "label": "fair",
+                        "value": 50
+                    },
+                    {
+                        "label": "salvage",
+                        "value": 60
+                    }
+                ],
+                "type": "multi",
+                "variant": "standard"
+            },
+            {
+                "label": "cylinders",
+                "name": "auto_cylinders",
+                "options": [
+                    {
+                        "label": "3 cylinders",
+                        "value": 1
+                    },
+                    {
+                        "label": "4 cylinders",
+                        "value": 2
+                    },
+                    {
+                        "label": "5 cylinders",
+                        "value": 3
+                    },
+                    {
+                        "label": "6 cylinders",
+                        "value": 4
+                    },
+                    {
+                        "label": "8 cylinders",
+                        "value": 5
+                    },
+                    {
+                        "label": "10 cylinders",
+                        "value": 6
+                    },
+                    {
+                        "label": "12 cylinders",
+                        "value": 7
+                    },
+                    {
+                        "label": "other",
+                        "value": 8
+                    }
+                ],
+                "type": "multi",
+                "variant": "standard"
+            },
+            {
+                "label": "use craigslist sub-area",
+                "name": "subarea",
+                "options": [
+                    {
+                        "label": "miami \/ dade",
+                        "location": {
+                            "city": "miami \/ dade",
+                            "lat": 25.814792,
+                            "lon": -80.236699,
+                            "radius": 50
+                        },
+                        "value": "mdc"
+                    },
+                    {
+                        "label": "broward county",
+                        "location": {
+                            "city": "broward county",
+                            "lat": 26.144589,
+                            "lon": -80.205696,
+                            "radius": 50
+                        },
+                        "value": "brw"
+                    },
+                    {
+                        "label": "palm beach co",
+                        "location": {
+                            "city": "palm beach co",
+                            "lat": 26.581739,
+                            "lon": -80.136227,
+                            "radius": 50
+                        },
+                        "value": "pbc"
+                    }
+                ],
+                "type": "select",
+                "value": ""
+            },
+            {
+                "form": [
+                    {
+                        "label": "search titles only",
+                        "name": "srchType",
+                        "type": "boolean",
+                        "value": "T"
+                    },
+                    {
+                        "label": "has image",
+                        "name": "hasPic",
+                        "type": "boolean",
+                        "value": 1
+                    },
+                    {
+                        "label": "posted today",
+                        "name": "postedToday",
+                        "type": "boolean",
+                        "value": 1
+                    },
+                    {
+                        "label": "hide duplicates",
+                        "name": "bundleDuplicates",
+                        "type": "boolean",
+                        "value": 1
+                    }
+                ],
+                "name": "basic bools",
+                "type": "group"
+            },
+            {
+                "form": [
+                    {
+                        "label": "cryptocurrency ok",
+                        "name": "crypto_currency_ok",
+                        "type": "boolean",
+                        "value": 1,
+                        "variant": "checkbox"
+                    },
+                    {
+                        "label": "delivery available",
+                        "name": "delivery_available",
+                        "type": "boolean",
+                        "value": 1,
+                        "variant": "checkbox"
+                    }
+                ],
+                "name": "crypto_currency_ok",
+                "type": "group"
+            },
+            {
+                "label": "language of posting",
+                "name": "language",
+                "options": [
+                    {
+                        "label": "afrikaans",
+                        "value": 1
+                    },
+                    {
+                        "label": "català",
+                        "value": 2
+                    },
+                    {
+                        "label": "dansk",
+                        "value": 3
+                    },
+                    {
+                        "label": "deutsch",
+                        "value": 4
+                    },
+                    {
+                        "label": "english",
+                        "value": 5
+                    },
+                    {
+                        "label": "español",
+                        "value": 6
+                    },
+                    {
+                        "label": "suomi",
+                        "value": 7
+                    },
+                    {
+                        "label": "français",
+                        "value": 8
+                    },
+                    {
+                        "label": "italiano",
+                        "value": 9
+                    },
+                    {
+                        "label": "nederlands",
+                        "value": 10
+                    },
+                    {
+                        "label": "norsk",
+                        "value": 11
+                    },
+                    {
+                        "label": "português",
+                        "value": 12
+                    },
+                    {
+                        "label": "svenska",
+                        "value": 13
+                    },
+                    {
+                        "label": "filipino",
+                        "value": 14
+                    },
+                    {
+                        "label": "türkçe",
+                        "value": 15
+                    },
+                    {
+                        "label": "中文",
+                        "value": 16
+                    },
+                    {
+                        "label": "العربية",
+                        "value": 17
+                    },
+                    {
+                        "label": "日本語",
+                        "value": 18
+                    },
+                    {
+                        "label": "한국말",
+                        "value": 19
+                    },
+                    {
+                        "label": "русский",
+                        "value": 20
+                    },
+                    {
+                        "label": "tiếng việt",
+                        "value": 21
+                    }
+                ],
+                "type": "multi",
+                "variant": "standard"
+            }
+        ],
+        "firstNearbyResultId": "7587623964",
+        "hubLinks": [
+            {
+                "href": "https:\/\/miami.craigslist.org\/search\/suvs",
+                "linkText": "SUVs",
+                "title": "SUVs for sale"
+            },
+            {
+                "href": "https:\/\/miami.craigslist.org\/search\/classic-cars",
+                "linkText": "classic cars",
+                "title": "classic cars for sale"
+            },
+            {
+                "href": "https:\/\/miami.craigslist.org\/search\/electric-cars",
+                "linkText": "electric cars",
+                "title": "electric cars for sale"
+            },
+            {
+                "href": "https:\/\/miami.craigslist.org\/search\/pickups-trucks",
+                "linkText": "pickups-trucks",
+                "title": "pickups and trucks for sale"
+            }
+        ],
+        "humanReadableParams": [
+            {
+                "key": "auto_make_model",
+                "name": "make and model",
+                "value": "bmw"
+            },
+            {
+                "key": "auto_transmission",
+                "name": "transmission",
+                "value": "manual"
+            },
+            {
+                "key": "max_auto_miles",
+                "name": "max odometer",
+                "value": "150000"
+            },
+            {
+                "key": "max_auto_year",
+                "name": "max model year",
+                "value": "1997"
+            },
+            {
+                "key": "sort",
+                "name": "sort",
+                "value": "newest"
+            }
+        ],
+        "items": [
+            [
+                8241620,
+                1997297,
+                145,
+                38500,
+                "1:1~25.6503~-80.3497",
+                [
+                    4,
+                    "3:00f0f_xQPFUa8Vj2_0CI0pE",
+                    "3:00X0X_38mCTcMkOWN_0pE0CI",
+                    "3:00q0q_gf9Oj8LJ3vP_0pE0CI",
+                    "3:00b0b_cpZSKPtvRb7_0CI0pO",
+                    "3:01515_aciu5VaD2dj_0CI0pE",
+                    "3:00Z0Z_1MLVkXkVdf5_0CI0pE",
+                    "3:00v0v_4WJunPAH1MU_0CI0pE",
+                    "3:00q0q_9AesFxGv0rw_0uY0CI",
+                    "3:00808_b3qGArT7pYl_0CI0pE",
+                    "3:00Y0Y_4cvLIPDVd2J_0CI0pE",
+                    "3:00808_lcEyVFiNFBk_0CI0pO",
+                    "3:00a0a_fLdY6PHv2qZ_0CI0pO",
+                    "3:00d0d_2P5BV9YUZgm_0CI0pO",
+                    "3:00o0o_8RcTlxy65dK_0CI0pO",
+                    "3:00J0J_tbqWhdU5dG_0CI0pO",
+                    "3:00N0N_ijbdA8E7u2i_0CI0pO"
+                ],
+                [
+                    6,
+                    "miami-bmw-325i"
+                ],
+                "Bmw 325i"
+            ],
+            [
+                8004732,
+                1948058,
+                145,
+                13500,
+                "2:2~26.1845~-80.1344",
+                [
+                    4,
+                    "3:00Z0Z_abMYIdjzD9oz_0CI0pO",
+                    "3:00w0w_jissYUJd4VNz_0CI0pO",
+                    "3:00C0C_iAzQqCK5QzPz_0CI0pO",
+                    "3:00D0D_7VILzXg9j6sz_0CI0pO",
+                    "3:01515_3ld9OJeZyJLz_0CI0pO",
+                    "3:00y0y_fnPtHulKne1z_0CI0pO",
+                    "3:00A0A_63kIXwFA1QUz_0CI0pO",
+                    "3:00k0k_sE3pCNH6Tvz_0CI0pO",
+                    "3:00h0h_aM2xY905PgEz_0CI0pO",
+                    "3:00S0S_8SQCT9GX5Z1z_0CI0pO",
+                    "3:00G0G_3dflc6xO1j3z_0CI0pO",
+                    "3:00y0y_3ZCEBbDyC9Ez_0CI0pO",
+                    "3:00o0o_4U6ZC3pvi5fz_0CI0pO",
+                    "3:00S0S_eOO3mRf5Scrz_0CI0pO",
+                    "3:00606_1douEGjr5qpz_0CI0pO",
+                    "3:00Z0Z_f437UAcOldXz_0CI0pO",
+                    "3:01616_1BvpVZDvApNz_0CI0pO",
+                    "3:01414_f7fKm5wLgdmz_0CI0pO",
+                    "3:00i0i_epdvlAVnGenz_0CI0pO",
+                    "3:00a0a_7Bg6sxiLg6Rz_0CI0pO",
+                    "3:00s0s_2pzKhDYA6zLz_0CI0pO",
+                    "3:01313_fdyMsAwL4tUz_0CI0pO",
+                    "3:00r0r_e6kvumka3MGz_0CI0pO",
+                    "3:00j0j_amcum2vaynUz_0CI0pO"
+                ],
+                [
+                    6,
+                    "fort-lauderdale-1992-bmw-325i-e30"
+                ],
+                "1992 BMW 325i E30 Convertible - 5-speed manual"
+            ],
+            [
+                7030524,
+                1710481,
+                145,
+                19995,
+                "2:3~26.2315~-80.1235",
+                [
+                    4,
+                    "3:00J0J_kp5xEjoziYEz_0CI0t2",
+                    "3:01414_gOTnX21uknfz_0CI0t2",
+                    "3:00h0h_kix5QnHqdBNz_0CI0t2",
+                    "3:00s0s_3i414iijKTJz_0CI0t2",
+                    "3:00m0m_im9Bt3iGYH0z_0CI0t2",
+                    "3:00S0S_hlDYEmKZu18z_0CI0t2",
+                    "3:01010_aQxUy6ht8rxz_0CI0t2",
+                    "3:00i0i_cPUi0LGqYWWz_0CI0t2",
+                    "3:00505_lepC1LuVdnrz_0CI0t2",
+                    "3:00S0S_1e5Yols8MwMz_0CI0t2",
+                    "3:00S0S_dWSzukQ3SFXz_0CI0t2",
+                    "3:00707_ebY1vvs2UPVz_0CI0t2",
+                    "3:00e0e_3lS7i4LQJiAz_0CI0t2",
+                    "3:00G0G_dM5p2pMqtWHz_0CI0t2",
+                    "3:00U0U_jmceIMO1oasz_0CI0t2",
+                    "3:00N0N_fcnka2mCwOdz_0CI0t2",
+                    "3:00d0d_eGNextnmaAVz_0CI0t2",
+                    "3:00J0J_g308ZK8pBc2z_0CI0t2",
+                    "3:01212_iZ5X6RoIXu3z_0CI0t2",
+                    "3:00j0j_2wtcjhJbxHAz_0CI0t2",
+                    "3:00T0T_laBo2OmCS7Xz_0CI0t2",
+                    "3:00p0p_1EMaGcV8NsZz_0CI0t2",
+                    "3:00j0j_3T3WHw21WkRz_0CI0t2",
+                    "3:00g0g_5dUR1dFJ2eQz_0CI0t2"
+                ],
+                [
+                    6,
+                    "margate-1978-bmw-316-low-kilometer"
+                ],
+                "1978 BMW 316 LOW KILOMETER GERMAN IMPORT VERY RARE COLLECTOR ITEM"
+            ],
+            [
+                4532864,
+                1064427,
+                145,
+                4875,
+                "2:4~26.011~-80.15",
+                [
+                    4,
+                    "3:00a0a_g24uFSQJCXy_0CI0t2",
+                    "3:00N0N_ikAtQUBzsM9_0CI0t2",
+                    "3:00e0e_4Zq8pGj6hJW_0CI0t2",
+                    "3:00l0l_hHzbqjga8K2_0CI0t2",
+                    "3:00202_lhCGet9UGvZ_0CI0t2",
+                    "3:00101_cHn1YOok6tp_0t20CI",
+                    "3:00c0c_6FRGfrC7B7y_0CI0t2",
+                    "3:00m0m_6oeRufIE5MY_0CI0t2",
+                    "3:00Y0Y_9wdF6ypPrQU_0CI0t2",
+                    "3:00101_y9UrQ0Rcy9_0CI0t2",
+                    "3:00q0q_d7ztQHqPjWu_0CI0t2",
+                    "3:00N0N_3HfmvkkqU6B_0CI0t2",
+                    "3:00202_aLeYCiA4YtP_0CI0t2",
+                    "3:01212_fUOlH53pBI3_0CI0t2",
+                    "3:00d0d_6P9ysgcKYs1_0CI0t2",
+                    "3:00k0k_5D47Qf4cCDo_0CI0t2",
+                    "3:00W0W_68DuaHKVZgm_0CI0t2",
+                    "3:00V0V_at22VYlne5r_0CI0t2",
+                    "3:00H0H_iRHeFkGC5YP_0t20CI",
+                    "3:00E0E_2R0WbfCvOLl_0t20CI",
+                    "3:00b0b_cPFhE230scI_0t20CI",
+                    "3:00G0G_4lEVD1O13aV_0CI0t2",
+                    "3:00303_16AcShzAZRx_0CI0t2"
+                ],
+                [
+                    6,
+                    "hollywood-1988-bmw-325i-e30-convertible"
+                ],
+                "1988 Bmw 325i E30 convertible"
+            ],
+            [
+                3643431,
+                865284,
+                145,
+                13900,
+                "1:1~25.765~-80.188",
+                [
+                    4,
+                    "3:00V0V_65zrkJBT102_0CI0t2",
+                    "3:00w0w_az8kXD5mPVU_0CI0t2",
+                    "3:00g0g_ghCBO2auw8D_0CI0t2",
+                    "3:00G0G_lxI40bar9sv_0CI0t2",
+                    "3:00W0W_aRqKiOOIRFI_0t20CI",
+                    "3:01313_dmI7T0JH31e_0t20CI"
+                ],
+                [
+                    6,
+                    "miami-1981-bmw-320i"
+                ],
+                "1981 BMW 320i"
+            ],
+            [
+                3543786,
+                852683,
+                145,
+                5250,
+                "2:5~26.1806~-80.1275",
+                [
+                    4,
+                    "3:00Y0Y_l4HRTziDw12_0CI0t2",
+                    "3:00A0A_a91UnDRaC6Q_0CI0t2",
+                    "3:00303_7juqd610RCq_0CI0t2",
+                    "3:01515_jMjMz8OKshk_0CI0t2",
+                    "3:00u0u_lRP9q2Tki9l_0CI0t2",
+                    "3:00E0E_90ZYtOLAR60_0CI0t2"
+                ],
+                [
+                    6,
+                    "fort-lauderdale-1996-bmw-z3-speed-bond"
+                ],
+                "1996 BMW Z3 5 speed Bond Car 1st Year"
+            ],
+            [
+                1304848,
+                298812,
+                145,
+                45000,
+                "2:6~26.1845~-80.1344",
+                [
+                    4,
+                    "3:00B0B_ltYZ0TZRngs_0CI0pO",
+                    "3:00303_3BrxvfZmfGZ_0CI0pO",
+                    "3:00I0I_cz8iwekb6h7_0CI0pO",
+                    "3:01313_gQat4nLjLU6_0CI0pO",
+                    "3:01111_djKGiErM6va_0CI0pO",
+                    "3:00p0p_jsAjxMVHuVm_0CI0pO",
+                    "3:00A0A_kUabdaBKMP1_0CI0pO",
+                    "3:00t0t_jfsH5x6gRAf_0CI0pO",
+                    "3:00C0C_1oO2eLPUTmv_0CI0pO",
+                    "3:00M0M_6BlyGyLQ1w0_0CI0pO",
+                    "3:00A0A_2JQ56ruCtdI_0CI0pO",
+                    "3:00Y0Y_ghPUEniaK1q_0CI0pO",
+                    "3:00U0U_bfYQc7BQUzO_0CI0pO",
+                    "3:00505_6F4Dwgob2uN_0CI0pO",
+                    "3:00z0z_9NJpbdOU98O_0CI0pO",
+                    "3:00404_kTgZrLG0RLy_0CI0pO",
+                    "3:00A0A_gr1zNb6jdF_0CI0pO",
+                    "3:00E0E_bzENKbaIqZy_0CI0pO",
+                    "3:00T0T_l2Y0DJ4JH0F_0CI0pO",
+                    "3:00m0m_eNo3R9lMbKi_0CI0pO",
+                    "3:01313_gNsfwym0NrG_0CI0pO",
+                    "3:00303_4XntV2GfAXE_0CI0pO"
+                ],
+                [
+                    6,
+                    "fort-lauderdale-1991-bmw-m5-dinan"
+                ],
+                "1991 BMW M5 Dinan"
+            ],
+            [
+                8812671,
+                2149199,
+                145,
+                10700,
+                "3:7~27.2889~-80.298",
+                [
+                    4,
+                    "3:00C0C_6uGqIJI70s3_0CI0t2",
+                    "3:00909_3YB55RZgSBv_0CI0t2",
+                    "3:00t0t_6kpUdqk2rZj_0CI0t2",
+                    "3:00Q0Q_l1DHx3wrfn8_0CI0t2",
+                    "3:01515_52cycxth9TU_0CI0t2",
+                    "3:00l0l_csaDYyrKWxM_0CI0t2",
+                    "3:00u0u_jzaURa1JCtn_0CI0t2",
+                    "3:00b0b_bwtPjyXUt9b_0CI0t2",
+                    "3:00b0b_lI75f4e9dQX_0CI0t2",
+                    "3:00q0q_ajT4MxLzm3s_0CI0t2",
+                    "3:00o0o_dU8X0JJi0jg_0CI0t2",
+                    "3:00f0f_89nBEXe3ynm_0CI0t2",
+                    "3:00A0A_kbnvqpKuVKJ_0CI0t2",
+                    "3:00S0S_gGEDAaCbwPV_0CI0t2",
+                    "3:00s0s_ggtISkvKQhP_0CI0t2",
+                    "3:00Q0Q_cVtYC4n4qzy_0t20CI",
+                    "3:00N0N_l59EltlrK1Y_0t20CI",
+                    "3:00G0G_80IDoEDvNQY_0CI0t2",
+                    "3:00E0E_9aOQMThFbON_0CI0t2",
+                    "3:00A0A_dt5lCLsLIUo_0CI0t2",
+                    "3:00k0k_bg0GaJJ1Nm2_0CI0t2",
+                    "3:00707_cfdKed3LDPv_0CI0t2",
+                    "3:00L0L_dYLi7OV0Qgv_0CI0t2",
+                    "3:00i0i_k7ZisWCwMMp_0CI0t2"
+                ],
+                [
+                    6,
+                    "port-saint-lucie-1981-bmw-733i-sport"
+                ],
+                "1981 BMW, 733I sport, RARE 5sp manual  excellent condition Runs perfec"
+            ],
+            [
+                7859339,
+                1908917,
+                145,
+                8200,
+                "4:8~26.2038~-81.7724",
+                [
+                    4,
+                    "3:00c0c_17JCsmBvmHL_0CI0t2",
+                    "3:00q0q_fykgTMiWwKK_0CI0t2",
+                    "3:00K0K_keGrb8aLDaY_0CI0t3",
+                    "3:00y0y_i7dP3NnTt1X_0CI0t3",
+                    "3:01515_kHymemvq9x4_0CI0t3",
+                    "3:00j0j_jcBiVnbSp0q_0CI0t2",
+                    "3:00202_imGiEWmlKBN_0CI0t2",
+                    "3:00J0J_iSCFXJ21HtI_0CI0t2",
+                    "3:00H0H_4MUnlDrv8kG_0CI0t2",
+                    "3:00l0l_8r4Ka0enCT_0CI0t2",
+                    "3:00J0J_9kGuZ8xO1c3_0CI0t2",
+                    "3:00606_dXMUnVXqV4a_0CI0t2",
+                    "3:00N0N_6dKEnAEifA1_0CI0t2",
+                    "3:00l0l_1SREZXWI18p_0CI0t2",
+                    "3:00w0w_fRreEoSUy2F_0CI0t2",
+                    "3:01414_icfBi5JZCUH_0CI0t2",
+                    "3:00t0t_ia3NRkc3Ncs_0CI0t2",
+                    "3:00v0v_8X7NeMpgf6R_0CI0t2"
+                ],
+                [
+                    6,
+                    "naples-1996-bmw-z3-collectible-with-48k"
+                ],
+                "1996 Bmw Z3, collectible with 48k miles, 5 speed"
+            ],
+            [
+                4887364,
+                1154315,
+                145,
+                10500,
+                "5:9~27.511~-82.5603",
+                [
+                    4,
+                    "3:00101_533TVnOv1Xgz_0t20CI",
+                    "3:00R0R_4yiKAfqYspEz_0t20CI",
+                    "3:00E0E_1GqbELFzX24z_0t20CI",
+                    "3:00p0p_CuxxPRCsjz_0t20CI",
+                    "3:00h0h_jgdCk7HZCjSz_0t20CI"
+                ],
+                [
+                    6,
+                    "palmetto-beautiful-1997-bmw-z3-roadster"
+                ],
+                "Beautiful 1997 BMW Z3 Roadster"
+            ],
+            [
+                4230409,
+                1017591,
+                146,
+                58745,
+                "6:10~26.5228~-81.7065",
+                [
+                    4,
+                    "3:00O0O_fIzbsAXGzIDz_0Vl0BI",
+                    "3:00B0B_71TPvsuX3sjz_1320MM",
+                    "3:00X0X_3rux6FUalT0z_0uY0mS",
+                    "3:00Y0Y_alxCe6b7bqQz_0uY0mm",
+                    "3:01111_haDwGpOuhr0z_0U80K8",
+                    "3:00Y0Y_dc1I2y9v6TIz_0Wg0H8",
+                    "3:00Q0Q_9aEB5Jh07mez_0uY0ld",
+                    "3:00n0n_4mKFDGBKFz5z_0uY0lK",
+                    "3:00O0O_eJkliwJ98tmz_1320MM",
+                    "3:00505_f40Ki5QhGXYz_1320MM",
+                    "3:00c0c_kXxai3RKvy3z_1320MM",
+                    "3:00000_hLPMoMnKNdMz_0Zr0L2",
+                    "3:00z0z_bPx6z37nq9Hz_1320MM",
+                    "3:00k0k_ctp3N3lDzRJz_1320MM",
+                    "3:01010_c5hyhHkV5Buz_1320MM",
+                    "3:00b0b_b54nbyCfJ5xz_1320MM",
+                    "3:00p0p_35hqoRkFRO2z_0Wk0AM",
+                    "3:00G0G_jSzTjEJ3Hhgz_1320MM",
+                    "3:01212_bTFusFyQcSNz_1320MM",
+                    "3:00A0A_2FkKA1oH6Qdz_0uY0nV",
+                    "3:00K0K_2Usaz0DlkiWz_1170JM",
+                    "3:00b0b_k95ewABSmxXz_0MM132",
+                    "3:00V0V_kZCEgWY5n7pz_1320MM",
+                    "3:00o0o_cmnvDlj1rXXz_1320MM"
+                ],
+                [
+                    6,
+                    "fort-myers-bmw-e36-m3-sedan-owner-40k"
+                ],
+                "BMW E36 M3 Sedan. 1-Owner, 40K miles, 5-speed manual."
+            ],
+            [
+                4032987,
+                955421,
+                145,
+                19700,
+                "5:11~26.9667~-82.3599",
+                [
+                    4,
+                    "3:00r0r_aXJn9uMtjlS_0CI0t2",
+                    "3:00g0g_Hctazzt9kX_0CI0t2",
+                    "3:00P0P_fHQMGDVygXB_0CI0t2",
+                    "3:00u0u_aSsr5GD4t0M_0CI0t2",
+                    "3:00j0j_gWmqcGPcVEA_0CI0t2",
+                    "3:00p0p_exHBg3jCkjV_0CI0t2",
+                    "3:00V0V_7hPhKRECtwF_0CI0t2",
+                    "3:00w0w_eENW2RgFe0O_0CI0t2",
+                    "3:01010_6OFerUIxrCQ_0CI0t2",
+                    "3:00t0t_dQkH2yF95qK_0CI0t2",
+                    "3:00E0E_LSihsZVJrN_0CI0t2",
+                    "3:01212_1DDCaRf9Y49_0CI0t2",
+                    "3:00f0f_anK3HejbEp8_0CI0t2",
+                    "3:00e0e_7qMqSMZAMXt_0CI0t2",
+                    "3:00y0y_iVZMk80si53_0CI0t2",
+                    "3:00q0q_kJAYiu1rgCZ_0CI0t2",
+                    "3:00X0X_knSUGF8RLx6_0CI0t2"
+                ],
+                [
+                    6,
+                    "englewood-1960-bmw-700-sport-coupe"
+                ],
+                "1960 BMW 700 SPORT COUPE MICRO CAR"
+            ],
+            [
+                0,
+                0,
+                145,
+                25000,
+                "6:12~26.6939~-81.9452",
+                [
+                    4,
+                    "3:00A0A_VpFoiBUsln_1320MM",
+                    "3:00J0J_kKAmETd3m5h_1320MM",
+                    "3:01414_8VJH8JHqEIK_1320MM",
+                    "3:00y0y_azF5ThgSLHn_1320MM",
+                    "3:00I0I_6csXfPDxOpP_1320MM",
+                    "3:00C0C_agR33XKqi2N_1320MM",
+                    "3:00V0V_1J6kkzJ6Wpt_1320MM",
+                    "3:00505_166vSxLuuda_1320MM",
+                    "3:01414_hDRcpTiy3Gj_1320MM",
+                    "3:00Y0Y_fuBoQgbliga_1320MM",
+                    "3:00O0O_9x369bv5FGU_1320MM",
+                    "3:00w0w_cL9iuJXfUsW_1320MM",
+                    "3:01212_k1fG57Mn8bb_1320MM",
+                    "3:00303_juEQOjrxEmM_1320MM",
+                    "3:00F0F_ayRnVIj4xdb_1320MM",
+                    "3:01313_jDqndJTTlDA_1320MM",
+                    "3:00m0m_jETIMS3lwNI_1320MM",
+                    "3:01515_4rB73tu2naH_1320MM",
+                    "3:00202_ecaMJSoCMbM_1320MM",
+                    "3:00Y0Y_4YktWiyMYJT_1320MM",
+                    "3:01212_6PLwnAva8n8_1320MM",
+                    "3:00S0S_jlPFvQ2WAv8_1320MM",
+                    "3:00x0x_ionhcXAZnDP_1320MM",
+                    "3:00303_gGLPk0uUA8H_1320MM"
+                ],
+                [
+                    6,
+                    "cape-coral-1990-bmw-325i-28l-speed"
+                ],
+                "1990 BMW 325i 2.8L 5-Speed"
+            ]
+        ],
+        "lang": "en_US",
+        "location": {
+            "areaId": 20,
+            "city": "south florida",
+            "country": "US",
+            "lat": 25.773899,
+            "lon": -80.193901,
+            "postal": "",
+            "radius": 60,
+            "region": "FL",
+            "url": "miami.craigslist.org"
+        },
+        "params": {
+            "auto_make_model": "bmw",
+            "auto_transmission": "1",
+            "max_auto_miles": "150000",
+            "max_auto_year": "1997",
+            "query": ""
+        },
+        "relatedSearches": [],
+        "resultsOrder": "date",
+        "totalResultCount": 7,
+        "updated": 1675973706,
+        "vicinity": null
+    },
+    "errors": []
+}
